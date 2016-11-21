@@ -1,5 +1,5 @@
 (defun reload ()
-  (load "hw3.lsp")
+  (load "sokoban.lsp")
   )
   
 (defun load-a-star ()
@@ -381,7 +381,7 @@
 ;then use mins to pick only one minimum distance for each box
 ;last, add all the minimum manhattan distances for each box
 ;to make sure not include NIL in the list, add cleanUpList
-(defun h604057669 (s)
+(defun heuristic (s)
 	(let* ((box-pos (getBoxPositions s 0))
 	 (goal-pos (getGoalPositions s 0))
 	 (dist	(cleanUpList (possible-distance box-pos goal-pos)))
